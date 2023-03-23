@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Front-end unit tests') {
+      steps {
+        sh 'cd curriculum-app && npm i && npm run test:unit'
+      }
+    }
+
   }
 }
